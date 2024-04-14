@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none; 
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+
+.task-item img {
+    width: 20px; 
+    height: 20px; 
+}

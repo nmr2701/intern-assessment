@@ -2,9 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const sequelize = require("./database"); // Update this line
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors());
 
 const taskRoutes = require("./routes/tasks");
 
@@ -27,6 +31,11 @@ assertDatabaseConnectionOk();
 
 // Define additional models and routes here
 app.use("/", taskRoutes);
+
+// app.get("/", (req, res) => {
+//   res.json({ message: "test" });
+// }
+// );
 
 // Synchronize models with the database
 sequelize
