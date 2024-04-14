@@ -15,6 +15,10 @@ Task.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    status: {
+      type: DataTypes.ENUM("pending", "completed"),
+      defaultValue: "pending",
+    },
   },
   {
     sequelize, // Pass the connection instance
