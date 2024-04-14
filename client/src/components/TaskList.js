@@ -6,7 +6,7 @@ import RedTrashCanIcon from "./red-trash-can-icon.svg";
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
-    const [taskType, setTaskType] = useState("pending");
+    const [taskType, setTaskType] = useState("pending"); // always load up pending tasks first
     const [newTaskTitle, setNewTaskTitle] = useState("");
     const [editedTaskTitle, setEditedTaskTitle] = useState("");
     const [isEditing, setIsEditing] = useState(false);
